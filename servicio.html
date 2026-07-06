@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Detalle del servicio veterinario — PetMed Clínica Veterinaria" />
+  <title>Servicio — PetMed Veterinaria</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>" />
+</head>
+<body>
+
+  <!-- ══ Navbar ══════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="PetMed inicio">
+        <div class="logo-icon">🩺</div>
+        PetMed
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios" class="active">Servicios</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="reserva.html" class="btn btn-primary" style="padding:10px 22px;font-size:0.85rem;">Reservar cita</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ Hero de página ══════════════════════════════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="tag">Nuestros servicios</div>
+      <h1 class="section-title">Atención veterinaria especializada</h1>
+      <p class="section-sub">
+        Conoce en detalle cada uno de nuestros servicios y reserva la atención
+        que tu mascota necesita.
+      </p>
+    </div>
+  </div>
+
+  <!-- ══ Contenido dinámico del servicio ══════════════════════ -->
+  <main class="container" id="servicio-detalle">
+    <!-- Renderizado por app.js -->
+    <div style="text-align:center;padding:80px 0;">
+      <div style="font-size:3rem;margin-bottom:16px;">⏳</div>
+      <p style="color:var(--gris-medio);">Cargando servicio…</p>
+    </div>
+  </main>
+
+  <!-- ══ Footer ═══════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">🩺</div>
+            PetMed
+          </div>
+          <p>Más de 10 años cuidando a las mascotas de Lima con profesionalismo, tecnología y amor.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="servicio.html?id=consulta">Consulta General</a></li>
+            <li><a href="servicio.html?id=vacunas">Vacunación</a></li>
+            <li><a href="servicio.html?id=bano">Baño y Grooming</a></li>
+            <li><a href="servicio.html?id=desparasitacion">Desparasitación</a></li>
+            <li><a href="servicio.html?id=cirugia">Cirugía</a></li>
+            <li><a href="servicio.html?id=laboratorio">Laboratorio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+            <li><a href="index.html#nosotros">Nuestro equipo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Reservas</h4>
+          <ul>
+            <li><a href="reserva.html">Reservar cita</a></li>
+            <li><a href="index.html#contacto">Horarios</a></li>
+            <li><a href="index.html#contacto">Emergencias 24/7</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PetMed. Todos los derechos reservados.</span>
+        <div class="social-links">
+          <a class="social-link" href="#" aria-label="Facebook">📘</a>
+          <a class="social-link" href="#" aria-label="Instagram">📷</a>
+          <a class="social-link" href="#" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

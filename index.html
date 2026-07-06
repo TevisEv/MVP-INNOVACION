@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PetMed Clínica Veterinaria — Reserva citas veterinarias online. Atención profesional para perros y gatos en Lima." />
+  <title>PetMed — Clínica Veterinaria</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>" />
+</head>
+<body>
+
+  <!-- ══ Navbar ══════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="PetMed inicio">
+        <div class="logo-icon">🩺</div>
+        PetMed
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio"    class="active">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="reserva.html" class="btn btn-primary" style="padding:10px 22px;font-size:0.85rem;">Reservar cita</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ Hero ════════════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+
+      <!-- Texto -->
+      <div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Atención disponible · Lun–Sáb
+        </div>
+        <h1 class="hero-title">
+          Salud y bienestar para tu <span class="highlight">mascota</span>, a un clic de distancia
+        </h1>
+        <p class="hero-desc">
+          Reserva citas veterinarias, conoce nuestros servicios y mantén a tu compañero
+          siempre saludable. Rápido, sencillo y sin llamadas.
+        </p>
+        <div class="hero-actions">
+          <a href="reserva.html" class="btn btn-primary">📅 Reservar cita ahora</a>
+          <a href="#servicios"   class="btn btn-outline">Ver servicios →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>+1,500</strong>
+            <span>Mascotas atendidas</span>
+          </div>
+          <div class="stat-item">
+            <strong>10+</strong>
+            <span>Años de experiencia</span>
+          </div>
+          <div class="stat-item">
+            <strong>4.9 ⭐</strong>
+            <span>Valoración promedio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collage de imágenes -->
+      <div class="hero-visual">
+
+        <!-- Imagen grande izquierda -->
+        <div class="hero-img tall">
+          <img src="img/clinica-exterior.jpg"
+               alt="Fachada de PetMed Clínica Veterinaria"
+               onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'ph-icon\'>🏥</span><span>clinica-exterior.jpg</span></div>'" />
+          <div class="hero-img-badge">
+            <span>🏥</span>
+            <div>
+              <strong>PetMed</strong>
+              <span>Miraflores, Lima</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen top derecha -->
+        <div class="hero-img">
+          <img src="img/consulta-veterinaria.jpg"
+               alt="Veterinario atendiendo a un perro"
+               onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'ph-icon\'>🩺</span><span>consulta-veterinaria.jpg</span></div>'" />
+        </div>
+
+        <!-- Imagen bottom derecha -->
+        <div class="hero-img">
+          <img src="img/mascotas-felices.jpg"
+               alt="Mascotas felices en la clínica"
+               onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'><span class=\'ph-icon\'>🐾</span><span>mascotas-felices.jpg</span></div>'" />
+          <div class="hero-img-badge">
+            <span>✅</span>
+            <div>
+              <strong>+98% satisfacción</strong>
+              <span>de nuestros clientes</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Servicios ════════════════════════════════════════════ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag">Nuestros servicios</div>
+        <h2 class="section-title">Todo lo que tu mascota necesita</h2>
+        <p class="section-sub">
+          Ofrecemos atención integral para perros y gatos con profesionales certificados
+          y equipos de última generación.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card fade-in" data-svc="consulta" role="button" tabindex="0" aria-label="Ver Consulta General">
+          <div class="svc-icon verde">🩺</div>
+          <div class="svc-name">Consulta General</div>
+          <div class="svc-desc">Evaluación completa del estado de salud de tu mascota con diagnóstico y recomendaciones personalizadas.</div>
+          <div class="svc-footer">
+            <span class="svc-price">S/ 45.00</span>
+            <span class="svc-link">Ver más →</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" data-svc="vacunas" role="button" tabindex="0" aria-label="Ver Vacunación">
+          <div class="svc-icon naranja">💉</div>
+          <div class="svc-name">Vacunación</div>
+          <div class="svc-desc">Esquema completo de vacunas para proteger a tu mascota de las principales enfermedades infecciosas.</div>
+          <div class="svc-footer">
+            <span class="svc-price">S/ 35.00</span>
+            <span class="svc-link">Ver más →</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" data-svc="bano" role="button" tabindex="0" aria-label="Ver Baño y Grooming">
+          <div class="svc-icon azul">🛁</div>
+          <div class="svc-name">Baño y Grooming</div>
+          <div class="svc-desc">Servicio completo de higiene estética: baño, secado, corte de uñas y limpieza de oídos.</div>
+          <div class="svc-footer">
+            <span class="svc-price">S/ 40.00</span>
+            <span class="svc-link">Ver más →</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" data-svc="desparasitacion" role="button" tabindex="0" aria-label="Ver Desparasitación">
+          <div class="svc-icon lila">🐛</div>
+          <div class="svc-name">Desparasitación</div>
+          <div class="svc-desc">Tratamiento interno y externo contra parásitos. Recomendado cada 3-6 meses para una mascota sana.</div>
+          <div class="svc-footer">
+            <span class="svc-price">S/ 25.00</span>
+            <span class="svc-link">Ver más →</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" data-svc="cirugia" role="button" tabindex="0" aria-label="Ver Cirugía">
+          <div class="svc-icon verde">🏥</div>
+          <div class="svc-name">Cirugía y Esterilización</div>
+          <div class="svc-desc">Procedimientos quirúrgicos con protocolo de anestesia completo y recuperación supervisada.</div>
+          <div class="svc-footer">
+            <span class="svc-price">Desde S/ 250.00</span>
+            <span class="svc-link">Ver más →</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in" data-svc="laboratorio" role="button" tabindex="0" aria-label="Ver Laboratorio">
+          <div class="svc-icon naranja">🔬</div>
+          <div class="svc-name">Laboratorio Clínico</div>
+          <div class="svc-desc">Análisis completos: hemograma, bioquímica sérica, urianálisis y más para un diagnóstico preciso.</div>
+          <div class="svc-footer">
+            <span class="svc-price">Desde S/ 60.00</span>
+            <span class="svc-link">Ver más →</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Nosotros ══════════════════════════════════════════════ -->
+  <section class="about-section" id="nosotros">
+    <div class="container about-grid">
+
+      <div class="about-content fade-in">
+        <div class="tag" style="background:rgba(255,255,255,0.15);color:#fff;">Sobre nosotros</div>
+        <h2 class="section-title">Cuidamos a tu mascota como si fuera la nuestra</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.75);margin-bottom:36px;">
+          PetMed es una clínica veterinaria con más de 10 años de experiencia en Lima,
+          comprometida con el bienestar animal y la satisfacción de nuestros clientes.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-item fade-in">
+            <div class="fi-icon">🎓</div>
+            <div class="fi-text">
+              <strong>Profesionales certificados</strong>
+              <span>Médicos veterinarios con especializaciones nacionales e internacionales.</span>
+            </div>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="fi-icon">🔬</div>
+            <div class="fi-text">
+              <strong>Equipos de última generación</strong>
+              <span>Laboratorio propio, ecografía, radiografía digital y más.</span>
+            </div>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="fi-icon">❤️</div>
+            <div class="fi-text">
+              <strong>Atención personalizada</strong>
+              <span>Tratamos a cada mascota de forma única, con paciencia y cariño.</span>
+            </div>
+          </div>
+          <div class="feature-item fade-in">
+            <div class="fi-icon">📱</div>
+            <div class="fi-text">
+              <strong>Reserva online 24/7</strong>
+              <span>Agenda tu cita en segundos desde cualquier dispositivo, sin llamadas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <div class="team-cards">
+          <div class="team-card">
+            <div class="team-avatar">👨‍⚕️</div>
+            <h4>Dr. Carlos Mendoza</h4>
+            <span>Medicina interna</span>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">👩‍⚕️</div>
+            <h4>Dra. Lucía Torres</h4>
+            <span>Cirugía veterinaria</span>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">👨‍⚕️</div>
+            <h4>Dr. Andrés Ríos</h4>
+            <span>Dermatología animal</span>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">👩‍⚕️</div>
+            <h4>Dra. María Villena</h4>
+            <span>Nutrición y preventiva</span>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:28px;">
+          <a href="reserva.html" class="btn btn-naranja">📅 Agenda tu cita hoy</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ CTA ══════════════════════════════════════════════════ -->
+  <section class="cta-band">
+    <div class="container fade-in">
+      <div class="tag">¿Listo para empezar?</div>
+      <h2 class="section-title">Tu mascota merece la mejor atención</h2>
+      <p class="section-sub">
+        Reserva una cita ahora y recibe atención prioritaria. Sin esperas, sin llamadas,
+        sin complicaciones.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="reserva.html" class="btn btn-primary">📅 Reservar cita ahora</a>
+        <a href="#contacto"    class="btn btn-outline">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Contacto / Horarios / Ubicación ══════════════════════ -->
+  <section class="contact-section" id="contacto">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="tag">Información</div>
+        <h2 class="section-title">Encuéntranos</h2>
+        <p class="section-sub">Estamos aquí para atenderte. Visítanos o escríbenos.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-block fade-in">
+          <h3><span class="cb-icon">📞</span> Contacto</h3>
+          <ul class="contact-list">
+            <li>
+              <span class="cl-dot">📞</span>
+              <div><strong>Teléfono</strong>(01) 234-5678</div>
+            </li>
+            <li>
+              <span class="cl-dot">📱</span>
+              <div><strong>WhatsApp</strong>+51 987 654 321</div>
+            </li>
+            <li>
+              <span class="cl-dot">✉️</span>
+              <div><strong>Correo</strong>hola@petmed.pe</div>
+            </li>
+            <li>
+              <span class="cl-dot">📍</span>
+              <div><strong>Dirección</strong>Av. Los Álamos 342, Miraflores, Lima</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-block fade-in">
+          <h3><span class="cb-icon">🕐</span> Horarios</h3>
+          <table class="schedule-table">
+            <tr><td>Lunes – Viernes</td><td>8:00 AM – 8:00 PM</td></tr>
+            <tr class="today"><td>Sábado</td><td>9:00 AM – 6:00 PM</td></tr>
+            <tr><td>Domingo</td><td>Solo emergencias</td></tr>
+            <tr><td>Feriados</td><td>10:00 AM – 4:00 PM</td></tr>
+          </table>
+          <div style="margin-top:20px;padding:14px 18px;background:var(--azul-pale);border-radius:10px;font-size:0.84rem;">
+            <strong style="color:var(--azul-oscuro);">🚨 Emergencias 24/7</strong><br>
+            <span style="color:var(--gris-medio);">Línea de urgencias: +51 999 000 111</span>
+          </div>
+        </div>
+
+        <div class="contact-block fade-in">
+          <h3><span class="cb-icon">📍</span> Ubicación</h3>
+          <div class="map-placeholder" role="img" aria-label="Mapa de PetMed Veterinaria"
+               onclick="window.open('https://maps.google.com','_blank')">
+            <div class="map-icon">🗺️</div>
+            <p>Av. Los Álamos 342<br>Miraflores, Lima</p>
+            <span class="btn btn-outline" style="padding:8px 18px;font-size:0.8rem;margin-top:6px;">
+              Ver en Google Maps ↗
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Footer ═══════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">🩺</div>
+            PetMed
+          </div>
+          <p>Más de 10 años cuidando a las mascotas de Lima con profesionalismo, tecnología y amor.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="servicio.html?id=consulta">Consulta General</a></li>
+            <li><a href="servicio.html?id=vacunas">Vacunación</a></li>
+            <li><a href="servicio.html?id=bano">Baño y Grooming</a></li>
+            <li><a href="servicio.html?id=desparasitacion">Desparasitación</a></li>
+            <li><a href="servicio.html?id=cirugia">Cirugía</a></li>
+            <li><a href="servicio.html?id=laboratorio">Laboratorio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Sobre nosotros</a></li>
+            <li><a href="#nosotros">Nuestro equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Reservas</h4>
+          <ul>
+            <li><a href="reserva.html">Reservar cita</a></li>
+            <li><a href="#contacto">Horarios</a></li>
+            <li><a href="#contacto">Emergencias 24/7</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PetMed Clínica Veterinaria. Todos los derechos reservados.</span>
+        <div class="social-links">
+          <a class="social-link" href="#" aria-label="Facebook">📘</a>
+          <a class="social-link" href="#" aria-label="Instagram">📷</a>
+          <a class="social-link" href="#" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

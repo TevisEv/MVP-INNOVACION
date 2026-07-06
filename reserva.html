@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reserva tu cita veterinaria en PetMed — rápido, sencillo y sin llamadas." />
+  <title>Reservar Cita — PetMed</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>" />
+</head>
+<body>
+
+  <!-- ══ Navbar ══════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="PetMed inicio">
+        <div class="logo-icon">🩺</div>
+        PetMed
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="reserva.html" class="btn btn-primary active" style="padding:10px 22px;font-size:0.85rem;">Reservar cita</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ Sección principal ════════════════════════════════════ -->
+  <main class="reserva-section">
+    <div class="container reserva-grid">
+
+      <!-- ─ Panel izquierdo informativo ─────────────────────── -->
+      <div class="reserva-info fade-in">
+        <div class="tag">Reserva de cita</div>
+        <h1>Agenda la atención de tu <span style="color:var(--verde-claro);">mascota</span></h1>
+        <p>Completa el formulario y nos pondremos en contacto contigo para confirmar la cita. Sin pagos previos, sin complicaciones.</p>
+
+        <div class="info-steps">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="st-text">
+              <strong>Completa el formulario</strong>
+              <span>Ingresa tus datos y los de tu mascota en menos de 2 minutos.</span>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="st-text">
+              <strong>Recibe la confirmación</strong>
+              <span>Te contactaremos por WhatsApp o correo para confirmar el horario.</span>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="st-text">
+              <strong>Asiste a tu cita</strong>
+              <span>Llega en el horario acordado. Nuestro equipo estará listo para atenderte.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garantías -->
+        <div style="margin-top:48px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:12px;background:var(--blanco);border-radius:12px;padding:16px 20px;box-shadow:var(--sombra-suave);">
+            <span style="font-size:1.4rem;">🔒</span>
+            <div>
+              <strong style="display:block;font-size:0.88rem;color:var(--verde-oscuro);">Sin pago previo</strong>
+              <span style="font-size:0.8rem;color:var(--gris-medio);">No cobraremos hasta que vengas a tu cita.</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--blanco);border-radius:12px;padding:16px 20px;box-shadow:var(--sombra-suave);">
+            <span style="font-size:1.4rem;">⏰</span>
+            <div>
+              <strong style="display:block;font-size:0.88rem;color:var(--verde-oscuro);">Respuesta en menos de 1 hora</strong>
+              <span style="font-size:0.8rem;color:var(--gris-medio);">Confirmamos tu cita rápidamente en horario de atención.</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--blanco);border-radius:12px;padding:16px 20px;box-shadow:var(--sombra-suave);">
+            <span style="font-size:1.4rem;">🩺</span>
+            <div>
+              <strong style="display:block;font-size:0.88rem;color:var(--verde-oscuro);">Atención especializada</strong>
+              <span style="font-size:0.8rem;color:var(--gris-medio);">Médicos certificados con años de experiencia.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─ Formulario de reserva ────────────────────────────── -->
+      <div class="reserva-form-card fade-in">
+
+        <!-- Formulario activo -->
+        <form id="reserva-form" novalidate>
+          <h2 class="form-title">📋 Datos de la cita</h2>
+          <p class="form-subtitle">Los campos marcados con <span style="color:var(--naranja-dark);">*</span> son obligatorios.</p>
+
+          <!-- Sección: Datos del propietario -->
+          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--verde-claro);margin-bottom:14px;">
+            👤 Datos del propietario
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nombre">Nombre completo <span>*</span></label>
+            <input class="form-control" type="text" id="nombre" name="nombre"
+                   placeholder="Ej. Juan García López" required autocomplete="name" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Correo electrónico</label>
+              <input class="form-control" type="email" id="email" name="email"
+                     placeholder="correo@ejemplo.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefono">Teléfono / WhatsApp <span>*</span></label>
+              <input class="form-control" type="tel" id="telefono" name="telefono"
+                     placeholder="+51 999 000 111" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <!-- Sección: Datos de la mascota -->
+          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--verde-claro);margin-bottom:14px;">
+            🩺 Datos de la mascota
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="mascota">Nombre de la mascota <span>*</span></label>
+              <input class="form-control" type="text" id="mascota" name="mascota"
+                     placeholder="Ej. Max, Luna, Firulais" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tipo">Tipo de mascota <span>*</span></label>
+              <div class="form-select-wrapper">
+                <select class="form-control" id="tipo" name="tipo" required>
+                  <option value="" disabled selected>Seleccionar…</option>
+                  <option value="perro">🐶 Perro</option>
+                  <option value="gato">🐱 Gato</option>
+                  <option value="ave">🐦 Ave</option>
+                  <option value="conejo">🐰 Conejo</option>
+                  <option value="otro">🩺 Otro</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="raza">Raza (opcional)</label>
+              <input class="form-control" type="text" id="raza" name="raza"
+                     placeholder="Ej. Labrador, Siamés" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edad">Edad aproximada</label>
+              <input class="form-control" type="text" id="edad" name="edad"
+                     placeholder="Ej. 2 años, 8 meses" />
+            </div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <!-- Sección: Datos de la cita -->
+          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--verde-claro);margin-bottom:14px;">
+            📅 Detalles de la cita
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="servicio">Servicio requerido <span>*</span></label>
+            <div class="form-select-wrapper">
+              <select class="form-control" id="servicio" name="servicio" required>
+                <option value="" disabled selected>Seleccionar servicio…</option>
+                <option value="consulta">🩺 Consulta General — S/ 45.00</option>
+                <option value="vacunas">💉 Vacunación — S/ 35.00</option>
+                <option value="bano">🛁 Baño y Grooming — S/ 40.00</option>
+                <option value="desparasitacion">🐛 Desparasitación — S/ 25.00</option>
+                <option value="cirugia">🏥 Cirugía / Esterilización — Desde S/ 250.00</option>
+                <option value="laboratorio">🔬 Laboratorio Clínico — Desde S/ 60.00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fecha">Fecha preferida <span>*</span></label>
+              <input class="form-control" type="date" id="fecha" name="fecha" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hora">Hora preferida <span>*</span></label>
+              <div class="form-select-wrapper">
+                <select class="form-control" id="hora" name="hora" required>
+                  <option value="" disabled selected>Seleccionar…</option>
+                  <optgroup label="Mañana">
+                    <option value="08:00">08:00 AM</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                  </optgroup>
+                  <optgroup label="Tarde">
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                    <option value="18:00">06:00 PM</option>
+                    <option value="19:00">07:00 PM</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notas">Observaciones adicionales</label>
+            <textarea class="form-control" id="notas" name="notas" rows="3"
+              placeholder="Ej. Mi mascota tiene alergia a ciertos medicamentos, es agresiva con extraños, etc."></textarea>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="terminos" name="terminos" />
+            <label for="terminos">
+              Acepto los <a href="#">términos y condiciones</a> y autorizo el tratamiento
+              de mis datos personales conforme a la <a href="#">política de privacidad</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:16px;">
+            📅 Confirmar reserva
+          </button>
+
+          <p style="text-align:center;font-size:0.78rem;color:var(--gris-medio);margin-top:14px;">
+            🔒 Tus datos están protegidos. No compartimos tu información con terceros.
+          </p>
+        </form>
+
+        <!-- ─ Confirmación (oculto hasta enviar) ──────────────── -->
+        <div id="confirmacion">
+          <div class="confirm-icon">🎉</div>
+          <h2>¡Reserva enviada con éxito!</h2>
+          <p>
+            Hemos recibido tu solicitud. Nuestro equipo se comunicará contigo
+            en menos de 1 hora para confirmar tu cita.
+          </p>
+
+          <div class="confirm-details">
+            <p style="font-weight:600;color:var(--verde-oscuro);margin-bottom:12px;">📋 Resumen de tu reserva:</p>
+            <div id="confirm-data">
+              <!-- Llenado por app.js -->
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="index.html" class="btn btn-primary" style="justify-content:center;">
+              🏠 Volver al inicio
+            </a>
+            <a href="index.html#servicios" class="btn btn-outline" style="justify-content:center;">
+              Ver otros servicios
+            </a>
+          </div>
+
+          <div style="margin-top:24px;padding:16px;background:var(--verde-menta);border-radius:12px;font-size:0.83rem;color:var(--verde-oscuro);">
+            <strong>¿Necesitas ayuda urgente?</strong><br>
+            Llámanos: <a href="tel:+51987654321" style="color:var(--verde-medio);font-weight:600;">+51 987 654 321</a>
+            &nbsp;·&nbsp;
+            WhatsApp disponible
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ══ Footer ═══════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">🩺</div>
+            PetMed
+          </div>
+          <p>Más de 10 años cuidando a las mascotas de Lima con profesionalismo, tecnología y amor.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="servicio.html?id=consulta">Consulta General</a></li>
+            <li><a href="servicio.html?id=vacunas">Vacunación</a></li>
+            <li><a href="servicio.html?id=bano">Baño y Grooming</a></li>
+            <li><a href="servicio.html?id=desparasitacion">Desparasitación</a></li>
+            <li><a href="servicio.html?id=cirugia">Cirugía</a></li>
+            <li><a href="servicio.html?id=laboratorio">Laboratorio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+            <li><a href="index.html#nosotros">Nuestro equipo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Reservas</h4>
+          <ul>
+            <li><a href="reserva.html">Reservar cita</a></li>
+            <li><a href="index.html#contacto">Horarios</a></li>
+            <li><a href="index.html#contacto">Emergencias 24/7</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PetMed. Todos los derechos reservados.</span>
+        <div class="social-links">
+          <a class="social-link" href="#" aria-label="Facebook">📘</a>
+          <a class="social-link" href="#" aria-label="Instagram">📷</a>
+          <a class="social-link" href="#" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
